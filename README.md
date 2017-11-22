@@ -1,5 +1,5 @@
 # nvidia-virtualgl-selenium-node-firefox
-Selenium node running Firefox v50.
+Selenium node running Firefox v57.
 VirtualGL is used to enable hardware accelerated WebGL content.
 
 This image is intended to be used via a selenium/hub instance, see below for a basic setup.
@@ -15,7 +15,7 @@ version: '2'
 
 services:
     selenium_hub:
-        image: selenium/hub:3.0.1-aluminum
+        image: selenium/hub:3.7.1-beryllium
         container_name: selenium_hub
         privileged: true
         ports:
@@ -27,7 +27,7 @@ services:
             - selenium_grid_internal
 
     nodefirefox:
-        image: plumbee/nvidia-virtualgl-selenium-node-firefox
+        image: treyturner/nvidia-virtualgl-selenium-node-firefox
         depends_on:
             - selenium_hub
         ports:
