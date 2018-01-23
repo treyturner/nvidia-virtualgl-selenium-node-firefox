@@ -5,7 +5,7 @@ USER root
 #=========
 # Firefox
 #=========
-ARG FIREFOX_VERSION=57.0
+ARG FIREFOX_VERSION=57.0.4
 RUN apt-get update -qqy \
   && apt-get -qqy --no-install-recommends install firefox \
   && apt-get -qqy install wget \
